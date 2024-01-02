@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Ensou 🎶</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Ensou</div>
+        <form action="/download" method="post" class="srch">
+            <select class="input1" name="songs">
+                {% for option in options %}
+                    <option value="{{ option }}">{{ option }}</option>
+                {% endfor %}
+            </select>
+            <button type="submit" class="btns"><ion-icon name="search"></ion-icon></button>
+        </form>
+        <div class="nav">
+            <a style="color:white;" href="/home">Home</a>
+            <a>About</a>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

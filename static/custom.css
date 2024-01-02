@@ -1,0 +1,231 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+.header{
+    position:fixed;
+    
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 60px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+}
+.logo{
+    font-size: 3em;
+    user-select: none;
+    font-weight: 800;
+
+}
+.nav{
+    height:70px;
+    
+}
+.nav a{
+    position: relative;
+    font-size: 1.3em;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 40px;
+   
+    
+}
+.nav a::after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:3px;
+    background:white;
+    bottom: -6px;
+    left:0;
+    transform:scaleX(0);
+    transition:transform .6s;
+}
+.nav a:hover::after{
+    transform:scaleX(1);
+}
+.profile{
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: lavender;
+    margin-left: 50px;
+    position:relative;
+    cursor:pointer;
+    
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    color:black;
+    margin-left: 25px;
+    text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.player{
+    height:150px;
+    width:100%;
+    position: absolute;
+    bottom:0;
+    left:0;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgb(241, 240, 240);
+
+}
+.player h2{
+    margin-left: 250px;
+    color:lightblue;
+}
+.tab{
+    width:600px;
+    height:100px;
+    justify-content:space-between;
+    margin-left: 570px;
+    margin-top: 50px;
+    font-size: 60px;
+    color:lavender;
+}
+.tab1{
+    width:600px;
+    height:100px;
+    justify-content:space-between;
+    margin-left: 630px;
+    margin-top: 50px;
+    font-size: 60px;
+    color:lavender;
+}
+.tab a{
+    color:lavender;
+    font-size: 60px;
+}
+.tab button{
+    background: none;
+    border: none;
+    font-size: 60px;
+    color: lavender;
+    cursor: pointer;
+}
+.tab1 a{
+    color:lavender;
+}
+.tab1 button{
+    background: none;
+    border: none;
+    font-size: 60px;
+    color: lavender;
+    cursor: pointer;
+}
+#toggle{
+    display:inline-block;
+}
+#toggle1{
+    display:none;
+}
+.list{
+    height:300px;
+    width:1200px;
+    margin-top: 220px;
+    margin-left: 100px;
+    background-color: aliceblue;
+    border: 2px solid rgb(206, 202, 202);
+    background:transparent;
+    border-radius: 15px;
+    box-shadow: 0 0 20px black;
+    padding: 18px 18px;
+    display:flex;
+}
+.list1{
+    height:450px;
+    width:1200px;
+    margin-top: 60px;
+    margin-left: 150px;
+    background-color: aliceblue;
+    border: 2px solid rgb(206, 202, 202);
+    background:transparent;
+    border-radius: 15px;
+    box-shadow: 0 0 20px black;
+    padding: 18px 18px;
+    display:flex;
+}
+.music{
+    overflow:auto;
+}
+.music button{
+    height:80px;
+    width:900px;
+    background-color: lavender;
+    font-size:1.4em;
+    border-radius: 10px;
+    box-shadow: 0 0 20px black;
+    color:rgb(3, 1, 6);
+    font-weight:bolder;
+    margin-left: 50px;
+    margin-top: 50px;
+    cursor: pointer;
+    padding-left: 8px;
+}
+.about{
+    margin-top:200px;
+    margin-left:150px;
+    background-color: black;
+    color:white;
+    font-size: 1.8em;
+    border-radius: 10px;
+    width:1200px;
+    height:500px;
+    text-align: center;
+    padding-top: 30px;
+    padding:20px 20px 20px 20px;
+    overflow:auto;
+}
+.error{
+    margin-top:300px;
+    margin-left:500px;
+    background-color: black;
+    color:white;
+    font-size: 1.8em;
+    border-radius: 10px;
+    width:500px;
+    height:200px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.starter{
+    /*margin-top: 150px;
+    margin-left:150px;*/
+    background: none;
+    border: none;
+    font-size: 90px;
+    color:pink;
+    cursor: pointer;
+}
+.lyrics{
+    margin-top: 150px;
+    margin-left: 300px;
+    width:700px;
+    height:570px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 40px rgb(5, 0, 0);
+    font-size: 1.5em;
+    color:azure;
+    padding:30px 50px;
+    border-radius: 10px;
+    font-weight: bolder;
+    overflow:auto;
+}

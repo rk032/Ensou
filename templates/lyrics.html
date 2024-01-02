@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Ensou 🎶</title>
+    <link rel="stylesheet" href="/static/custom.css">
+</head>
+<body style="background: url(/static/pic8.jpg);background-repeat: no-repeat;background-size:cover;background-position: center;">
+    <div class="header">
+        <div class="logo">Ensou</div>
+        <div class="nav">
+            <a style="color:white;" href="/home">Home</a>
+            <a>About</a>
+            <div class="dropdown">
+                <button class="profile"><ion-icon name="person-circle"></ion-icon></button>
+                <div class="dropdown-content">
+                    <label>Guest</label>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="lyrics">
+        <h2>{{song}}</h2>
+        <h4>{{artists}}</h4>
+        <p style="margin-top: 60px;">{{options}}</p>
+    </div>
+    <script src="/static/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Ensou 🎶</title>
+    <link rel="stylesheet" href="/static/custom.css">
+</head>
+<body style="background: url(/static/pic9.jpg);background-repeat: no-repeat;background-size:cover;background-position: center;">
+    <div class="header">
+        <div class="logo">Ensou</div>
+        <div class="nav">
+            <a style="color:white;" href="/home">Home</a>
+            <a>About</a>
+            <div class="dropdown">
+                <button class="profile"><ion-icon name="person-circle"></ion-icon></button>
+                <div class="dropdown-content">
+                    <label>Guest</label>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="list">
+        <button onclick="plays()" class="starter"><ion-icon name="play-circle"></ion-icon></button>
+        <div class="music">
+            {% for option in options %}
+                    <button onclick="curr(this)" value="{{ option }}">{{ option }}</button>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="player">
+        <div class="tab">
+            <button onclick="repeater()"><ion-icon name="repeat"></ion-icon></button>
+            <button onclick="pre()"><ion-icon name="play-skip-back-circle"></ion-icon></button>
+            <button onclick="togglePlayPause()" id="toggle"><ion-icon name="pause-circle" class="playe"></ion-icon></button>
+            <button onclick="togglePlayPause()" id="toggle1"><ion-icon name="play-circle" class="playe1"></ion-icon></button>
+            <button onclick="nex()"><ion-icon name="play-skip-forward-circle"></ion-icon></button>
+            <a href="/lyric"><ion-icon name="musical-note"></ion-icon></a>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

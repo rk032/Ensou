@@ -1,0 +1,342 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+.header{
+    position:fixed;
+    
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 60px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+}
+.logo{
+    font-size: 3em;
+    user-select: none;
+    font-weight: 800;
+
+}
+.nav a{
+    position: relative;
+    font-size: 1.3em;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 40px;
+}
+.nav a::after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:3px;
+    background:white;
+    bottom: -6px;
+    left:0;
+    transform:scaleX(0);
+    transition:transform .6s;
+}
+.nav a:hover::after{
+    transform:scaleX(1);
+}
+.nav .login-pop{
+    width:130px;
+    height:50px;
+    background: transparent;
+    position:relative;
+    font-size:1.3em;
+    color:white;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-left: 40px;
+    cursor:pointer;
+    transition: 0.6s;
+}
+.nav .login-pop:hover{
+    background-color: rgb(246, 241, 246);
+    color: black;
+}
+@keyframes animate{
+    0%,100%{
+      background-image: url("/static/pic2.jpg");
+    }
+    25%{
+      background-image: url("/static/pic1.jpg");
+    }
+    50%{
+      background-image: url("/static/pic3.jpg");
+    }
+}
+body{
+    animation: animate 30s ease-in-out infinite;
+    justify-content: center;
+    background-size: cover;
+    background-attachment:fixed;
+    align-items: center;
+    min-height:100vh;
+    display:flex;
+    background-position: center;
+
+}
+.box{
+    position:relative;
+    height:440px;
+    width: 400px;
+    border: 2px solid rgb(206, 202, 202);
+    background:transparent;
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 0 20px black;
+    overflow:hidden;
+    transform:scale(0);
+    transition: transform .28s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box.active-pop{
+    transform:scale(1);
+    transition: transform .28s ease;
+}
+.box.active{
+    height:520px;
+}
+.box.form-login{
+    width:100%;
+    padding:60px;
+    transition: transform .50s ease;
+    transform:translateX(0)
+}
+.box.active .form-login{
+    transition:none;
+    transform:translateX(-400px);
+}
+
+.form-register{
+    width:100%;
+    padding:60px;
+    position:absolute;
+    transform:translateX(400px);
+}
+.box.active .form-register{
+    width:100%;
+    padding:60px;
+    position:absolute;
+    transition: transform .50s ease;
+    transform:translateX(0);
+}
+.box .close{
+    position:absolute;
+    top:0;
+    right:0;
+    width:40px;
+    height:40px;
+    font-size:2em;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+.form-login h2{
+    font-size: 2em;
+    text-align: center;
+}
+.form-register h2{
+    font-size: 2em;
+    text-align: center;
+}
+.input-box{
+    position:relative;
+    height:50px;
+    width:100%;
+    border-bottom: 2px solid black;
+    margin:30px 0;
+
+}
+.input-box label{
+    position: absolute;
+    top:50%;
+    left:5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    font-weight: 500;
+    pointer-events: None;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top:-5px;
+}
+
+.input-box input{
+    width:100%;
+    height:100%;
+    background: transparent;
+    border:None;
+    outline: None;
+    font-weight: 500;
+
+}
+.input-box .icon{
+    position:absolute;
+    right:8px;
+    font-size: 1.2em;
+    top:15px;
+}
+.forgot{
+    font-size: .9em;
+    display:flex;
+    justify-content: space-between;
+}
+.forgot a{
+    color:black;
+    text-decoration: none;
+}
+.forgot a:hover{
+    text-decoration: underline;
+}
+.sub{
+    width:100%;
+    height:50px;
+    background-color: black;
+    border-radius: 15px;
+    outline:none;
+    border: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    color:rgb(245, 238, 245);
+    margin-top: 20px;
+    transition:1s;
+}
+.sub:hover{
+    background-color: white;
+    color:black;
+    
+}
+.register{
+    margin-left: 40px;
+}
+.register a{
+    margin-left: 5px;
+}
+.player{
+    margin-right: 750px;
+
+    transition: transform .5s ease;
+
+}
+.player.nactive{
+    display: none;
+    transition: transform .5s ease;
+}
+.search{
+    display:flex;
+    margin-top: 150px;
+}
+.profile{
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: lavender;
+    margin-left: 50px;
+    position:relative;
+    cursor:pointer;
+    
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    color:black;
+    margin-left: 25px;
+    text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.ic{
+    background-color: black;
+    width:20px;
+}
+.search input{
+    width:600px;
+    height:45px;
+    margin-left: 680px;
+    border-radius: 20px;
+    border-color: black;
+    border-style: groove;
+    font-size: 25px;
+    padding-left: 30px;
+}
+.btnsrch{
+    width:50px;
+    height:45px;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor:pointer;
+}
+.srch .input1{
+    width:650px;
+    height:45px;
+    /*margin-left: 780px;*/
+    border-radius: 20px;
+    border-color: black;
+    border-style: groove;
+    font-size: 16px;
+}
+
+.btns{
+    width:50px;
+    height:45px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor:pointer;
+}
+.stuff{
+    height:200px;
+    width:430px;
+    margin-top: 80px;
+    margin-left: 780px;
+    background-color: aliceblue;
+    border: 2px solid rgb(206, 202, 202);
+    background:transparent;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0 0 20px black;
+    padding-top: 30px;
+}
+.lib{
+    background-color: palevioletred;
+    width:130px;
+    height:130px;
+    margin-bottom: 100px;
+    margin-left:50px;
+    border-radius: 20px;
+    color:white;
+    font-size: 25px;
+    border: 6px solid rgb(206, 202, 202);
+    box-shadow: 0 0 20px black;
+    cursor:pointer;
+}
+.lib1{
+    font-size: 50px;
+    margin-top: 5px;
+    margin-left: 5px;
+    color:white;
+}
+.player.play{
+    display:none;
+}
+

@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Ensou 🎶</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Ensou</div>
+        <div class="nav">
+            <a style="color:white;" href="/home">Home</a>
+            <a style="color:white;" href="/about">About</a>
+            <div class="dropdown">
+                <button class="profile"><ion-icon name="person-circle"></ion-icon></button>
+                <div class="dropdown-content">
+                    <label>Guest</label>
+                </div>
+            </div>    
+        </div>
+    </div>
+    
+    <div class="player">
+        <form action="/sr" method="post" class="search">
+            <input type="text" name="song_name" autocomplete="off">
+            <button type="submit" class="btnsrch"><ion-icon name="search"></ion-icon></button>
+        </form>
+        <div class="stuff">
+            <button onclick="libr()" class="lib"><ion-icon name="library" class="lib1"></ion-icon></button>
+            <button onclick="rec()" class="lib"><ion-icon name="albums-outline" class="lib1"></ion-icon></button>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
