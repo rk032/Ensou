@@ -32,8 +32,8 @@ Ensou: Your go-to open-source music player! Seamlessly enjoy your favorite tunes
 ![Screenshot 2024-03-21 193227](https://github.com/rk032/Ensou/assets/105430589/9803bf3a-099d-4d44-a6c8-b62a2aee6525)
 
 ## Acknowledgements
-1.Flask
-2.Ionicons
+1. Flask
+2. Ionicons
 
 
 
