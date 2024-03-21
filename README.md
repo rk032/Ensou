@@ -1,10 +1,6 @@
 # Ensou
 EnSou: Your go-to open-source music player! Seamlessly enjoy your favorite tunes with an intuitive interface. Powered by machine learning (K-means clustering), it suggests personalized song recommendations tailored to your music taste. Elevate your music experience with EnSou's simplicity and smart features. #OpenSource #MusicPlayer
 
-# Project A: Personalized Music System with K-means Clustering
-
-## Overview
-Project A is a personalized music system that utilizes K-means clustering for song recommendations tailored to individual preferences. It incorporates a doubly linked circular linked list for efficient song navigation and playback control, offering features such as repeat and lyric display. The frontend is designed using HTML/CSS, JavaScript, and Flask framework.
 
 ## Key Technologies
 -Python (3.x recommended)
