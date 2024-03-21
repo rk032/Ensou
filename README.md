@@ -3,13 +3,13 @@ Ensou: Your go-to open-source music player! Seamlessly enjoy your favorite tunes
 
 
 ## Key Technologies
-1.Python (3.x recommended)
-2.Flask
-3.K-means clustering (Scikit-learn)
-4.Music playback (moviepy, pygame)
-5.Song download (pytube, yt_dlp) 
-6.Data analysis (pandas, NumPy)
-7.Web scraping (requests)
+1. Python (3.x recommended)
+2. Flask
+3. K-means clustering (Scikit-learn)
+4. Music playback (moviepy, pygame)
+5. Song download (pytube, yt_dlp) 
+6. Data analysis (pandas, NumPy)
+7. Web scraping (requests)
 
 
 ## Installation
